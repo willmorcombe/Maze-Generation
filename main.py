@@ -19,7 +19,7 @@ def main ():
 
     while run:
 
-        print(len(stack), len(grid))
+
         # clock.tick(60)
         current.visited = True
         for cell in grid:
@@ -28,7 +28,7 @@ def main ():
         current.highlight()
         neighIndexs = current.getNeighIndex()
         nextPos = notVisitedNeighs(neighIndexs, grid)
-        if nextPos is not -1:
+        if nextPos != -1:
             nextPos.visited = True
             stack.append(current)
             removeWalls(current, nextPos)
